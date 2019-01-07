@@ -46,10 +46,10 @@ func dnsHandler(w dns.ResponseWriter, r *dns.Msg) {
 	// networks, rednet and bluenet, with a different IP address on each. This
 	// allows us to test load balance across gRPC backends.
 	m.Answer = append(m.Answer, &dns.A{
-		A:   net.ParseIP("10.77.77.77"),
+		A:   net.ParseIP("172.16.77.77"),
 		Hdr: hdr,
 	}, &dns.A{
-		A:   net.ParseIP("10.88.88.88"),
+		A:   net.ParseIP("172.16.88.88"),
 		Hdr: hdr,
 	})
 
